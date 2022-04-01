@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --gray-color: hsl(225, 20%, 75%);
+  --white-color: hsl(225, 60%, 95%);
+  --black-color: hsl(225, 30%, 10%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--white-color);
+  color: var(--black-color);
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 80px;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: 100%;
+  padding: 48px 0;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navbar-logo a {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.navbar .navbar-logo a:hover {
+  color: var(--white-color);
+}
+
+.navbar .navbar-list {
+  display: flex;
+}
+
+.navbar .navbar-list li {
+  margin-left: 48px;
+  list-style: none;
+}
+
+.navbar .navbar-list li a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: var(--white-color);
+}
+
+.navbar .navbar-list li a:hover {
+  color: var(--white-color);
+}
+
+.navbar .navbar-toggler {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--white-color);
+}
+
+.navbar .navbar-toggler:hover {
+  color: white;
+}
+
+.navbar .navbar-toggler .close {
+  display: none;
+}
+
+.navbar.sticky {
+  background-color: var(--black-color);
+  padding: 16px 0;
+}
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 160px;
+  padding-bottom: 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(.././img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .hero-text h1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 64px;
+  text-transform: capitalize;
+  margin: 0 80px;
+  color: var(--white-color);
+}
+
+.hero .hero-text p {
+  letter-spacing: 2px;
+  margin: 16px 160px;
+  color: var(--gray-color);
+}
+
+.hero .hero-button {
+  display: flex;
+  justify-content: center;
+}
+
+.hero .hero-button button {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+}
+
+.hero .hero-button .button-outline {
+  background-color: transparent;
+  border: 3px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.hero .hero-button .button-color {
+  background-color: var(--white-color);
+  border: 3px solid var(--white-color);
+  color: var(--black-color);
+}
+
+.about {
+  padding-top: 160px;
+}
+
+.about .container {
+  display: flex;
+  gap: 48px;
+}
+
+.about .about-image img {
+  width: 450px;
+}
+
+.about .about-text h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 8px;
+}
+
+.about .about-text p {
+  letter-spacing: 1px;
+}
+
+.about .about-text button {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 16px 0;
+  padding: 12px 32px;
+  cursor: pointer;
+  background-color: var(--black-color);
+  border: 3px solid var(--black-color);
+  color: var(--white-color);
+}
+
+.service {
+  padding-top: 160px;
+}
+
+.service .service-title h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+.service .service-body {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 48px;
+}
+
+.service .service-body .card {
+  padding: 40px 48px;
+  border: 5px solid var(--black-color);
+}
+
+.service .service-body .card-logo {
+  font-size: 72px;
+  text-align: center;
+}
+
+.service .service-body .card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.service .service-body .card-body {
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.contact {
+  margin-top: 160px;
+  padding-top: 80px;
+  background: var(--black-color);
+  color: var(--white-color);
+}
+
+.contact .container {
+  width: 100%;
+}
+
+.contact .contact-title h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+.contact .contact-body {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+}
+
+.contact form .form-input {
+  margin-bottom: 16px;
+}
+
+.contact form .form-input label {
+  letter-spacing: 1px;
+  display: block;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+.contact form .form-input input {
+  font-family: inherit;
+  width: 100%;
+  padding: 12px 18px;
+  background: var(--white-color);
+  color: var(--black-color);
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: 0;
+}
+
+.contact form .form-input input:focus {
+  outline: none;
+}
+
+.contact form .form-input textarea {
+  font-family: inherit;
+  width: 100%;
+  height: 150px;
+  padding: 12px 18px;
+  background: var(--white-color);
+  color: var(--black-color);
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: 0;
+}
+
+.contact form .form-input textarea:focus {
+  outline: none;
+}
+
+.contact form button {
+  float: right;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.contact-item {
+  margin-bottom: 24px;
+}
+
+.contact .contact-info .logo {
+  font-size: 24px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+.contact .contact-info .content {
+  display: inline;
+  letter-spacing: 1px;
+}
+
+footer .copyright {
+  text-align: center;
+  margin-top: 48px;
+  padding: 16px;
+  border-top: 1px solid var(--white-color);
+  letter-spacing: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    padding: 0 48px;
+  }
+
+  .navbar .navbar-list li {
+    margin-left: 32px;
+  }
+
+  .hero .hero-text h1 {
+    margin: 0 48px;
+  }
+
+  .hero .hero-text p {
+    margin: 16px 80px;
+  }
+
+  .about .about-image img {
+    width: 350px;
+  }
+
+  .service .service-body {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .contact .contact-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .navbar .navbar-menu {
+    position: fixed;
+    height: 100vh;
+    overflow: scroll;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    padding-top: 80px;
+    background: var(--black-color);
+    transition: all 0.5s ease;
+  }
+
+  .navbar .navbar-menu.active {
+    left: 0;
+  }
+
+  .navbar .navbar-list {
+    display: block;
+  }
+
+  .navbar .navbar-list li a {
+    display: inline-block;
+    margin: 32px 0;
+  }
+
+  .navbar .navbar-toggler {
+    display: block;
+    z-index: 999;
+  }
+
+  .navbar .navbar-toggler.active .open {
+    display: none;
+  }
+
+  .navbar .navbar-toggler.active .close {
+    display: block;
+  }
+
+  .hero .hero-text h1 {
+    margin: 0;
+  }
+
+  .hero .hero-text p {
+    margin: 16px 0;
+  }
+
+  .hero .hero-button {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .service .service-body {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .contact .contact-body {
+    grid-template-columns: 1fr;
+  }
+}
